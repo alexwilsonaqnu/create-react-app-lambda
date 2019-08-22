@@ -21,31 +21,10 @@
     -->
     <title>React App</title>
   </head>
-  <body>
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '2410340132393995',
-          cookie     : true,
-          xfbml      : true,
-          version    : 'v2.11'
-        });
 
-        FB.AppEvents.logPageView();
-        var fbInitEvent = new Event('FBObjectReady');
-          document.dispatchEvent(fbInitEvent);
-
-      };
-
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "https://connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-    </script>
     <div id="root"></div>
+
+    <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
