@@ -1,6 +1,29 @@
 import React, { Component } from "react"
 import logo from "./logo.svg"
 import "./App.css"
+import FacebookLoginButton from './FacebookLoginButton';
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '2410340132393995',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.11'
+    });
+
+    FB.AppEvents.logPageView();
+
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 
 class LambdaDemo extends Component {
   constructor(props) {
