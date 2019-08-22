@@ -22,12 +22,12 @@
     <title>React App</title>
     <meta
   name="google-signin-client_id"
-  content="974201228817-v0goqk8ouhcbbo3ic3aetm853p6935jc.apps.googleusercontent.com"
+  content="974201228817-5055492iolh6vct0gs3vkov2cgqalat6.apps.googleusercontent.com"
 />
 <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
   <body>
-
+  <div id="root"></div>
     <div id="my-signin2" ></div>
       <script>
         function onSuccess(googleUser) {
@@ -45,16 +45,14 @@
             'margin':50,
             'theme': 'dark',
             'onsuccess': onSuccess,
-            'onfailure': onFailure,
-            'display': 'flex',
-            'justifyContent': 'center'
+            'onfailure': onFailure
           });
         }
       </script>
 
       <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 
-        <div id="root"></div>
+
 
     <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
     <!--
