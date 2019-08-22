@@ -20,7 +20,39 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <meta
+  name="google-signin-client_id"
+  content="974201228817-v0goqk8ouhcbbo3ic3aetm853p6935jc.apps.googleusercontent.com"
+/>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
+  <body>
+    <div id="root"></div>
+    <div id="my-signin2" ></div>
+      <script>
+        function onSuccess(googleUser) {
+          console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+        }
+        function onFailure(error) {
+          console.log(error);
+        }
+        function renderButton() {
+          gapi.signin2.render('my-signin2', {
+            'scope': 'profile email',
+            'width': 240,
+            'height': 50,
+            'longtitle': true,
+            'margin':50,
+            'theme': 'dark',
+            'onsuccess': onSuccess,
+            'onfailure': onFailure,
+            'display': 'flex',
+            'justifyContent': 'center'
+          });
+        }
+      </script>
+
+      <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 
     <div id="root"></div>
 
